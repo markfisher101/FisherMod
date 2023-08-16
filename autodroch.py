@@ -23,10 +23,13 @@ class AutoDrochMod(loader.Module):
 
     async def a_run(self, message):
         while True:
-            await message.reply("/dick@xyu_epta_bot")
-            await asyncio.sleep(21600)
             await message.reply("/drochnut@xyu_epta_bot")
             await asyncio.sleep(3960)
+
+    async def b_run(self, message):
+        while True:
+            await message.reply("/dick@xyu_epta_bot")
+            await asyncio.sleep(21600)
 
     @loader.unrestricted
     @loader.ratelimit
@@ -35,7 +38,7 @@ class AutoDrochMod(loader.Module):
         if self.tasks:
             return await message.edit("Автодрочка уже запущена.")
         await message.edit("Автодрочка запущена.")
-        self.tasks = [asyncio.create_task(self.a_run(message)),]
+        self.tasks = [asyncio.create_task(self.a_run(message)), asyncio.create_task(self.b_run(message))]
 
     @loader.unrestricted
     @loader.ratelimit
