@@ -46,6 +46,11 @@ class FarmMonacoMod(loader.Module):
             await client.send_message('@monacogamebot', "Ферма снять")
             await asyncio.sleep(3600)
 
+    async def q_run(self, client):
+        while True:
+            await client.send_message('@monacogamebot', "Ограбить")
+            await asyncio.sleep(43200)
+
     @loader.unrestricted
     @loader.ratelimit
     async def mfarmcmd(self, message):
@@ -54,7 +59,7 @@ class FarmMonacoMod(loader.Module):
             return await message.edit("Автоматический фарминг уже запущен.")
         await message.edit("Автоматический фарминг запущен.")
         client = message.client
-        self.tasks = [asyncio.create_task(self.b_run(client)), asyncio.create_task(self.p_run(client)), asyncio.create_task(self.l_run(client)), asyncio.create_task(self.t_run(client)), asyncio.create_task(self.a_run(client))]
+        self.tasks = [asyncio.create_task(self.b_run(client)), asyncio.create_task(self.p_run(client)), asyncio.create_task(self.l_run(client)), asyncio.create_task(self.t_run(client)), asyncio.create_task(self.a_run(client)), asyncio.create_task(self.q_run(client))]
 
     @loader.unrestricted
     @loader.ratelimit
