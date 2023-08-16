@@ -43,7 +43,7 @@ class AutoDrochMod(loader.Module):
     @loader.unrestricted
     @loader.ratelimit
     async def drochstopcmd(self, message):
-        """Остановить автодрочкуг в боте"""
+        """Остановить автодрочку в боте"""
         if not self.tasks:
             return await message.edit("Автодрочка не запущена.")
         for task in self.tasks:
