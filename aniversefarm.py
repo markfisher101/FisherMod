@@ -23,7 +23,7 @@ class FarmAniverseMod(loader.Module):
     async def b_run(self, client):
         while True:
             await client.send_message('@aniversecard_bot', "Получить карту")
-            await asyncio.sleep(14400)
+            await asyncio.sleep(14430)
 
     @loader.unrestricted
     @loader.ratelimit
