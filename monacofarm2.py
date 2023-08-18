@@ -1,5 +1,5 @@
 # orignal developer: @modwini
-#edited by: @sukrammi
+#updated by: @sukrammi
 import random
 from datetime import timedelta
 import asyncio
@@ -28,26 +28,31 @@ class FarmMonacoMod(loader.Module):
 
     async def p_run(self, client):
         while True:
+            await asyncio.sleep(5)
             await client.send_message('@monacogamebot', "Бизнес снять")
             await asyncio.sleep(3600)
 
     async def l_run(self, client):
         while True:
+            await asyncio.sleep(10)
             await client.send_message('@monacogamebot', "Город снять")
             await asyncio.sleep(3600)
 
     async def t_run(self, client):
         while True:
+            await asyncio.sleep(15)
             await client.send_message('@monacogamebot', "Работать")
             await asyncio.sleep(1800)
 
     async def a_run(self, client):
         while True:
+            await asyncio.sleep(20)
             await client.send_message('@monacogamebot', "Ферма снять")
             await asyncio.sleep(3600)
 
     async def q_run(self, client):
         while True:
+            await asyncio.sleep(25)
             await client.send_message('@monacogamebot', "Ограбить")
             await asyncio.sleep(43200)
 
