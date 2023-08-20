@@ -1,5 +1,4 @@
 # orignal developer: @modwini
-#updated by: @sukrammi
 import random
 from datetime import timedelta
 import asyncio
