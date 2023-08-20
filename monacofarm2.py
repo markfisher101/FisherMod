@@ -1,4 +1,4 @@
-# orignal developer: @modwini
+# meta developer: @modwini
 import random
 from datetime import timedelta
 import asyncio
