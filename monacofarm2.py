@@ -31,7 +31,7 @@ class FarmMonacoMod(loader.Module):
             await client.send_message('@monacogamebot', "Бизнес снять")
             await asyncio.sleep(3605)
 
-    async def с_run(self, client):
+    async def c_run(self, client):
         while True:
             await asyncio.sleep(10)
             await client.send_message('@monacogamebot', "Собирать листья")
